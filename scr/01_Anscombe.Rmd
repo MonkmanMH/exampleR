@@ -1,0 +1,201 @@
+---
+title: "Anscombe's Quartet"
+output:
+  html_document
+---
+
+Using Anscobme's Quartet to introduce principles of data visualization.
+
+
+In 1973, F.J. Anscombe published a short paper titled "Graphs in Statistical Analysis" (see References below for details). At the time, the use of computers for statistical calculations was becoming more common. Anscombe's thesis is summarized thus:
+
+> "A computer should make both calculations and graphs. Both sorts of outputs should be studied; each will contribute to understanding."
+
+To demonstrate his point, he created a quartet of X-Y pairs.
+
+In this example, we will use R to work through Anscombe's paper.
+
+First, we load the necessary packages for data manipulation and graphics.
+
+```{r packages}
+
+# components of the tidyverse
+library(dplyr)
+library(tidyr)
+#
+library(ggplot2)
+
+# data sources
+library(Tmisc)
+
+```
+
+
+
+The quartet is included in base R, as the data object `anscombe`:
+
+```{r}
+
+anscombe
+
+```
+
+
+Reshape form:
+
+```{r}
+
+anscombe_tidy <- anscombe %>% 
+  mutate(observation = seq_len(n())) %>% 
+  pivot_longer(-observation, names_to = "variable_set", values_to = "value") %>% 
+  separate(variable_set, c("variable", "set"), 1, convert = TRUE) %>%
+  mutate(set = c("I", "II", "III", "IV")[set]) %>% 
+  pivot_wider(names_from = variable) %>% 
+  arrange(set)
+
+anscombe_tidy
+
+```
+
+
+
+### Summary statistics
+
+Each of the four sets has the same summary statistics. Let's calculate them now:
+
+Introducing {dplyr}
+
+
+```{r}
+
+anscombe_tidy %>%
+  group_by(set) %>%
+  summarize(mean.x = mean(x))
+
+```
+
+```{r}
+
+anscombe_tidy %>%
+  group_by(set) %>%
+  summarize(mean.x = mean(x),
+            mean(y))
+
+```
+
+
+
+```{r}
+
+anscombe_tidy %>% 
+  group_by(set) %>% 
+  summarize(mean(x), 
+            sd(x), 
+            mean(y), 
+            sd(y), 
+            cor(x, y))
+
+```
+
+
+## Visualizing the quartet
+
+Using the R visualization package {ggplot2}
+
+```{r}
+
+library(ggplot2)
+
+```
+
+
+
+
+```{r}
+
+ggplot(anscombe_tidy, aes(x = x, y = y)) + 
+  geom_point() 
+
+
+```
+
+With colour to separate each group
+
+```{r}
+
+ggplot(anscombe_tidy, aes(x, y, colour = set)) + 
+  geom_point()
+
+
+```
+
+
+
+### Plot one group at a time
+
+
+
+
+### Facet plot
+
+```{r}
+
+ggplot(anscombe_tidy, aes(x, y)) + 
+  geom_point() + 
+  facet_wrap(~set)
+
+```
+
+
+Add a trend line using the `geom_smooth` function.
+
+* the `method = lm` indicates a "linear model", i.e. a standard regression line. {ggplot2} provides access to other smoothing algorithms.
+
+* the `se = FALSE` turns off the "standard error" (a measure of uncertainty in the data)
+
+```{r}
+
+ggplot(anscombe_tidy, aes(x, y)) + 
+  geom_point() + 
+  geom_smooth(method = lm, se = FALSE) +
+  facet_wrap(~set)
+
+```
+
+
+
+
+```{r}
+
+ggplot(anscombe_tidy, aes(x, y)) + geom_point() + geom_smooth(method = lm, se = FALSE) + 
+    facet_wrap(~set)
+
+```
+
+
+### References
+
+Anscombe, F. J. (1973). "Graphs in Statistical Analysis". American Statistician. 27 (1): 17–21. [doi:10.1080/00031305.1973.10478966](https://www.tandfonline.com/doi/abs/10.1080/00031305.1973.10478966). JSTOR 2682899.
+
+[Anscombe's Quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet)—wikipedia page
+
+
+
+https://rstudio-pubs-static.s3.amazonaws.com/52381_36ec82827e4b476fb968d9143aec7c4f.html 
+
+https://rstudio-pubs-static.s3.amazonaws.com/355492_5bbde2dd99134f47b03d834b030d509b.html
+
+https://plotlyblog.tumblr.com/post/68951620673/why-graph-anscombes-quartet 
+
+https://rpubs.com/dgrtwo/tidy-anscombe
+
+https://rpubs.com/turnersd/anscombe
+
+https://www.r-bloggers.com/the-visual-difference-%E2%80%93-r-and-anscombe%E2%80%99s-quartet/
+
+
+#### Excel references
+
+https://projects.ncsu.edu/labwrite/res/gt/gt-reg-home.html
+
+
