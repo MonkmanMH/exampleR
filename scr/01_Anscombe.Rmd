@@ -4,20 +4,7 @@ output:
   html_document
 ---
 
-Using Anscobme's Quartet to introduce principles of data visualization.
-
-
-In 1973, F.J. Anscombe published a short paper titled "Graphs in Statistical Analysis" (see References below for details). At the time, the use of computers for statistical calculations was becoming more common. Anscombe's thesis is summarized thus:
-
-> "A computer should make both calculations and graphs. Both sorts of outputs should be studied; each will contribute to understanding."
-
-To demonstrate his point, he created a quartet of X-Y pairs.
-
-In this example, we will use R to work through Anscombe's paper.
-
-First, we load the necessary packages for data manipulation and graphics.
-
-```{r packages}
+```{r setup}
 
 # components of the tidyverse
 library(dplyr)
@@ -25,11 +12,36 @@ library(tidyr)
 #
 library(ggplot2)
 
-# data sources
-library(Tmisc)
+# utilities
+library(here)
 
 ```
 
+Using Anscobme's Quartet to introduce principles of data visualization.
+
+
+## 1973: a big year
+
+In 1973, Xerox introduced the Alto computer, the first with a GUI (graphical user interface). Steve Jobs visited Xerox PARC and knicked the GUI idea and later deployed it in the first Macintosh. The computer cost $32,000 (~$110,000 in 2019$).
+
+![Xerox Alto](..\img\xerox_alto.jpg)
+
+
+1973 was also the year that the ethernet standard was introduced, allowing for the connection of computers locally AND early internet protocols were being developed.
+
+For more about 1973, see the [Timeline of Computer History](https://www.computerhistory.org/timeline/1973/).
+
+Also in 1973, F.J. Anscombe published a short paper titled "Graphs in Statistical Analysis" (see References below for details). At the time, the use of computers for statistical calculations was becoming more common. Anscombe's thesis is summarized thus:
+
+> "A computer should make both calculations and graphs. Both sorts of outputs should be studied; each will contribute to understanding."
+
+To demonstrate his point, he created a quartet of X-Y pairs. There are 11 pairs in each of the four sets--so it's not a very big data set.
+
+
+
+## Using R for Exploratory Data Analysis (EDA)
+
+In this example, we will use R to work through Anscombe's paper.
 
 
 The quartet is included in base R, as the data object `anscombe`:
