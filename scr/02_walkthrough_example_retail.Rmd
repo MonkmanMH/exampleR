@@ -373,13 +373,14 @@ dataplot2
 # experiments with ggplot2's new subtitle and caption options
 cht_title <- as.character("Retail sales, B.C.")
 cht_subtitle <- as.character("Seasonally adjusted and unadjusted")
-cht_caption <- as.character("Source: Statistics Canada, CANSIM table 20-10-0008-01")
+cht_caption <- as.character(glue::glue("Source: Statistics Canada, CANSIM table ", table_id))
+
 # add titles / X-Y axis labels
 cht_plot <- dataplot2 +
   labs(title = cht_title,
        subtitle = cht_subtitle,
        caption = cht_caption, 
-       x = NULL, y = NULL) 
+       x = NULL, y = "dollars (thousands)") 
 cht_plot
 
 #ggsave(filename = "NHPI_plot.png", plot = NHPI_plot,
