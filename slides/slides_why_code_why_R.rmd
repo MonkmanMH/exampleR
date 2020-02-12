@@ -201,6 +201,44 @@ EXAMPLES
 
 ---
 
+math
+
+```{r}
+
+curve(x^2, from = -10, to = 10, main = "x^2")
+
+```
+
+
+???
+
+https://towardsdatascience.com/overview-of-40-mathematical-functions-in-r-4b4e138685ff
+
+see also https://cran.r-project.org/web/views/NumericalMathematics.html
+
+---
+
+math art: harmonograph
+
+```{r}
+
+x = A1*sin(t*f1+p1)*exp(-d1*t) + A2*sin(t*f2+p2)*exp(-d2*t)
+y = A3*sin(t*f3+p3)*exp(-d3*t) + A4*sin(t*f4+p4)*exp(-d4*t)
+
+```
+
+???
+
+https://en.wikipedia.org/wiki/Harmonograph
+
+https://blog.revolutionanalytics.com/2018/04/mathematical-art-in-r-.html
+
+https://github.com/marcusvolz/mathart
+
+
+
+---
+
 astronomy
 
 ![galaxy density contours](../img/galaxy_density_contours.jpg)
@@ -214,6 +252,71 @@ This shows the spatial distribution of galaxies in the cluster Abell 85, using d
 
 ---
 
+wildlife tracking
+
+
+![storks in Florida](../img/storks_in_FL.JPG)
+
+
+???
+
+http://www.r-gators.com/2018/01/31/wildlife-tracking-data-in-r/
+
+More wildlife biology:
+
+https://arxiv.org/pdf/1805.03227.pdf
+
+https://wildlife.onlinelibrary.wiley.com/doi/pdf/10.1002/wsb.847
+
+---
+
+mapping—biogeoclimatic zones
+
+
+![BC biogeoclimatic zones](../img/BC_biogeo.JPG)
+
+
+???
+
+http://www.env.gov.bc.ca/soe/indicators/land/land-designations.html
+
+https://github.com/bcgov/land-designations-shinyapp
+
+
+More R for natural resources:
+https://www.nps.gov/im/statistics.htm
+
+https://sites.google.com/site/r4naturalresources/
+
+---
+
+social geography
+
+https://walkerke.shinyapps.io/neighborhood_diversity/#explore-metros
+
+
+
+
+
+---
+
+economy of B.C.—retail sales
+
+
+
+???
+
+Stephanie's shiny app
+
+
+
+
+
+
+
+
+
+---
 
 class: inverse
 
