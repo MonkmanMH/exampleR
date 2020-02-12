@@ -18,19 +18,85 @@ output:
 options(htmltools.dir.version = FALSE)
 ```
 
+class: inverse
+
+# “Statistics can be deadly dull…”
+
+Dave Havard,
+_Gardening Between the Frosts_ (1986)
+
+???
+
+A book about gardening in northern B.C. and the first sentence of the first chapter starts with “Statistics can be deadly dull…”
+
+I recognize “statistics” has a bit of a reputation. But there are some _fascinating_ numbers and their associated trends that I want to talk about today.
+
+These numbers and trends have importance for public sector decision makers, whether they are developing and evaluating policy, or striving to improve the operations of their program area.
+
+And I hope it’s not deadly dull.
+
+
+
+---
+
 # BC Stats
 
+![Legislative Library & Bureau of Statistics Act, 1894](../img/library stats act_1894.jpg)
+
+???
+
+BC Stats, the provincial statistics agency in British Columbia, got its start in 1894 with the passing of the Legislative Library and Statistics Bureau Act. 
+
+We provide statistical evidence to policy makers across the government, the broader public sector (such as health administrators and school boards), businesses, and the public. We do this through analysis of existing Statistics Canada data (including the Census of Canada), administrative data collected by government agencies, and surveys that we carry out.
 
 
 ---
 
 # What we do
 
+“…collect, compile, compare, analyze, abstract, project and distribute statistical information respecting the commercial, industrial, financial, social, economic and general activities and conditions of British Columbia and persons in British Columbia or doing business in British Columbia”
+–Statistics Act, section 5
+
+???
+
+British Columbia Statistics Act, section 5
+
+http://www.bclaws.ca/civix/document/id/complete/statreg/96439_01#section5
+
+---
+
+## The Canadian National Statistical System
+
+“The objective of national statistical systems is to provide relevant, comprehensive, accurate and objective (politically untainted) statistical information.”
+Ivan Fellegi, Chief Statistician of Canada from 1985-2008
+
+???
+
+Ivan Fellegi, “Characteristics of an Effective Statistical System”
+International Statistical Review / Revue Internationale de Statistique
+Vol. 64, No. 2 (Aug., 1996), pp. 165-187
+Published by: International Statistical Institute (ISI)
+DOI: 10.2307/1403738
+https://www.jstor.org/stable/1403738
+
+
+
+Shaida Badiee, Johannes Jütting, Deirdre Appel, Thilo Klein and Eric Swanson
+“The role of national statistical systems in the data revolution”
+Development Co-operation Report 2017; Data for Development; © OECD 2017
+https://www.oecd-ilibrary.org/docserver/dcr-2017-8-en.pdf?expires=1578509507&id=id&accname=guest&checksum=30ABDF52E29B4552C6AA3D945352839B
+
 
 
 
 ---
 
+the data science process
+
+![survey workflow 1](../img/data-science.png)
+
+
+---
 
 # Why code?
 
