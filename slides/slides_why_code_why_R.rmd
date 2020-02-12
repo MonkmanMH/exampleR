@@ -262,12 +262,42 @@ Base R is like the engine and frame of a car
 
 class: inverse
 
-EXAMPLES
+# EXAMPLES
 
 
 ---
 
-math
+## math
+
+* linear & matrix algebra
+
+* quadratic equations
+
+* geometry (sine, cosine, tangent)
+
+???
+
+https://en.wikibooks.org/wiki/R_Programming/Mathematics
+
+---
+
+## math: probability
+
+winning the 6/49 lottery
+
+```{r}
+
+factorial(49) / (factorial(6) * factorial(49-6))
+
+```
+
+???
+
+http://garsia.math.yorku.ca/~zabrocki/math5020f03/lot649/lot649v3.pdf
+
+---
+
+## math: plots
 
 ```{r}
 
@@ -284,7 +314,17 @@ see also https://cran.r-project.org/web/views/NumericalMathematics.html
 
 ---
 
-math art: harmonograph
+## math art: rose curves
+
+
+
+???
+
+https://en.wikipedia.org/wiki/Rose_(mathematics)
+
+---
+
+## math art: harmonograph
 
 ```{r}
 
@@ -376,11 +416,24 @@ Stephanie's shiny app
 
 
 
+---
+
+B.C. population: 1971
+
+
+
+---
+
+B.C. population: 2016
 
 
 
 
 
+
+---
+
+B.C. population: 1971 to 2016
 
 ---
 
