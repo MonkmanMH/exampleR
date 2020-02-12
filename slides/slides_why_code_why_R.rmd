@@ -18,6 +18,19 @@ output:
 options(htmltools.dir.version = FALSE)
 ```
 
+# BC Stats
+
+
+
+---
+
+# What we do
+
+
+
+
+---
+
 
 # Why code?
 
@@ -60,7 +73,7 @@ Hilary Parker, [“Opinionated Analysis Development”](https://peerj.com/prepri
 
 ---
 
-![survey workflow 1](../img_allison_horst/code_hero_rstats.png)
+![R community](../img_allison_horst/code_hero_rstats.png)
 
 ???
 
@@ -177,6 +190,26 @@ Base R is like the engine and frame of a car
 (dark mode!)
 
 ![VW Beetle dashboard](../img/VW_dashboard_2018.jpg)
+
+
+---
+
+class: inverse
+
+EXAMPLES
+
+
+---
+
+astronomy
+
+![galaxy density contours](../img/galaxy_density_contours.jpg)
+
+???
+
+http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html
+
+This shows the spatial distribution of galaxies in the cluster Abell 85, using data from the NASA Extragalactic Database (NED). Overlaid are contours of kernel-smoothed number density, plotted using alpha blending (semi-transparency). Also included is an inset plot of the 1 dimensional kernel-smoothed redshift distribution, with the same colours as used in the main plot, which also serves as a key for the colour-code; the dashed curve is a Gaussian distribution with the same mean and standard deviation as the galaxy redshifts
 
 
 ---
