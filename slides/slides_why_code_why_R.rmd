@@ -96,12 +96,6 @@ https://www.oecd-ilibrary.org/docserver/dcr-2017-8-en.pdf?expires=1578509507&id=
 
 ### the data science process
 
-![](../img/data-science.png)
-
----
-
-### the data science process
-
 ![the data science process](../img/data-science-collection.png)
 
 source: Grolemund & Wickham, _R for Data Science_
@@ -316,7 +310,7 @@ see also https://cran.r-project.org/web/views/NumericalMathematics.html
 rose_curve(4, 5)
 ```
 
-<img src="../img/rose_curve-4-5.png" alt="rose curve" width = "600">
+<img src="../img/rose_curve-4-5.png" alt="rose curve" width = "400">
 
 
 ???
@@ -331,7 +325,7 @@ https://github.com/marcusvolz/mathart
 
 ---
 
-### astronomy
+## astronomy
 
 ![galaxy density contours](../img/galaxy_density_contours.jpg)
 
@@ -344,7 +338,7 @@ This shows the spatial distribution of galaxies in the cluster Abell 85, using d
 
 ---
 
-wildlife tracking
+## wildlife tracking
 
 * storks in Florida
 
@@ -363,7 +357,7 @@ https://wildlife.onlinelibrary.wiley.com/doi/pdf/10.1002/wsb.847
 
 ---
 
-mapping—biogeoclimatic zones
+## mapping—biogeoclimatic zones
 
 
 ![BC biogeoclimatic zones](../img/BC_biogeo.JPG)
@@ -383,7 +377,13 @@ https://sites.google.com/site/r4naturalresources/
 
 ---
 
-social geography
+## social geography
+
+<img src="../img/Seattle_diversity_gradient.jpg" alt="Seattle diversity gradient" width = "800">
+
+
+
+???
 
 https://walkerke.shinyapps.io/neighborhood_diversity/#explore-metros
 
@@ -393,7 +393,7 @@ https://walkerke.shinyapps.io/neighborhood_diversity/#explore-metros
 
 ---
 
-economy of B.C.—retail sales
+## economy of B.C.—retail sales
 
 ![retail trade, B.C.](../img/retail_trade_BC_2019-09.png)
 
@@ -405,22 +405,25 @@ https://bcstats.shinyapps.io/RetailSalesApp/
 
 ---
 
-B.C. population: 1971
+## demography
 
+B.C. population: 2019
 
+![](../img/plot_age_groupdist_BC_2019.png)
 
 ---
 
-B.C. population: 2016
+B.C. population: compare 1971 to 2019
 
 
-
-
+![](../img/plot_smooth_years.png)
 
 
 ---
 
 B.C. population: 1971 to 2016
+
+![](../img/BC_pop_dist_anim.gif)
 
 ---
 
