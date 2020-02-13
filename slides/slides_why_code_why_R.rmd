@@ -41,7 +41,8 @@ And I hope it’s not deadly dull.
 
 # BC Stats
 
-![Legislative Library & Bureau of Statistics Act, 1894](../img/library stats act_1894.jpg)
+
+<img src="../img/library stats act_1894.jpg" alt="Legislative Library & Bureau of Statistics Act, 1894" width = "600">
 
 ???
 
@@ -55,7 +56,8 @@ We provide statistical evidence to policy makers across the government, the broa
 # What we do
 
 “…collect, compile, compare, analyze, abstract, project and distribute statistical information respecting the commercial, industrial, financial, social, economic and general activities and conditions of British Columbia and persons in British Columbia or doing business in British Columbia”
-–Statistics Act, section 5
+
+–_Statistics Act_, section 5
 
 ???
 
@@ -65,9 +67,10 @@ http://www.bclaws.ca/civix/document/id/complete/statreg/96439_01#section5
 
 ---
 
-## The Canadian National Statistical System
+### The Canadian National Statistical System
 
 “The objective of national statistical systems is to provide relevant, comprehensive, accurate and objective (politically untainted) statistical information.”
+
 Ivan Fellegi, Chief Statistician of Canada from 1985-2008
 
 ???
@@ -91,10 +94,17 @@ https://www.oecd-ilibrary.org/docserver/dcr-2017-8-en.pdf?expires=1578509507&id=
 
 ---
 
-the data science process
+### the data science process
 
-![survey workflow 1](../img/data-science.png)
+![](../img/data-science.png)
 
+---
+
+### the data science process
+
+![the data science process](../img/data-science-collection.png)
+
+source: Grolemund & Wickham, _R for Data Science_
 
 ---
 
@@ -103,11 +113,12 @@ the data science process
 
 ## Reproducible workflow
 
->Saves time,
->Produces better science,
->Creates more trusted research,
->Reduces the risk of errors, and
->Encourages collaboration.
+>* Saves time,
+>* Produces better science,
+>* Creates more trusted research,
+>* Reduces the risk of errors, and
+>* Encourages collaboration.
+
 - David Smith, [Reproducible Data Science with R](https://blog.revolutionanalytics.com/2017/04/reproducible-data-science-with-r.html)
 
 ???
@@ -195,29 +206,8 @@ IDE (interactive development environment)
 
 * also the company that developed and supports the IDE
 
-* RStudio is also active creating and supporting packages, including...
+* RStudio is also active creating and supporting packages
 
-
-
-
----
-
-# The Tidyverse
-
-![dplyr hex](../img/tidyverse_400.png)
-
-???
-
-Image source: https://github.com/rstudio/hex-stickers (for all tidyverse hex images)
-
----
-
-
-# {tidyverse}
-
-"The tidyverse is an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures."
-
-The [{tidyverse} site](https://tidyverse.org): tidyverse.org
 
 
 
@@ -283,7 +273,13 @@ https://en.wikibooks.org/wiki/R_Programming/Mathematics
 
 ## math: probability
 
-winning the 6/49 lottery
+What are the odds of winning the 6/49 lottery?
+
+$\binom{n}{r}$ : picking _r_ items from a set of size _n_ 
+
+Factorial!
+
+$n!/r!(n-r)!$
 
 ```{r}
 
@@ -295,14 +291,14 @@ factorial(49) / (factorial(6) * factorial(49-6))
 
 http://garsia.math.yorku.ca/~zabrocki/math5020f03/lot649/lot649v3.pdf
 
+math notation: https://www.calvin.edu/~rpruim/courses/s341/S17/from-class/MathinRmd.html 
+
 ---
 
 ## math: plots
 
 ```{r}
-
 curve(x^2, from = -10, to = 10, main = "x^2")
-
 ```
 
 
@@ -316,26 +312,16 @@ see also https://cran.r-project.org/web/views/NumericalMathematics.html
 
 ## math art: rose curves
 
+```{r eval=FALSE}
+rose_curve(4, 5)
+```
+
+<img src="../img/rose_curve-4-5.png" alt="rose curve" width = "600">
 
 
 ???
 
 https://en.wikipedia.org/wiki/Rose_(mathematics)
-
----
-
-## math art: harmonograph
-
-```{r}
-
-x = A1*sin(t*f1+p1)*exp(-d1*t) + A2*sin(t*f2+p2)*exp(-d2*t)
-y = A3*sin(t*f3+p3)*exp(-d3*t) + A4*sin(t*f4+p4)*exp(-d4*t)
-
-```
-
-???
-
-https://en.wikipedia.org/wiki/Harmonograph
 
 https://blog.revolutionanalytics.com/2018/04/mathematical-art-in-r-.html
 
@@ -345,7 +331,7 @@ https://github.com/marcusvolz/mathart
 
 ---
 
-astronomy
+### astronomy
 
 ![galaxy density contours](../img/galaxy_density_contours.jpg)
 
@@ -360,6 +346,7 @@ This shows the spatial distribution of galaxies in the cluster Abell 85, using d
 
 wildlife tracking
 
+* storks in Florida
 
 ![storks in Florida](../img/storks_in_FL.JPG)
 
@@ -408,13 +395,13 @@ https://walkerke.shinyapps.io/neighborhood_diversity/#explore-metros
 
 economy of B.C.—retail sales
 
-
+![retail trade, B.C.](../img/retail_trade_BC_2019-09.png)
 
 ???
 
 Stephanie's shiny app
 
-
+https://bcstats.shinyapps.io/RetailSalesApp/
 
 ---
 
